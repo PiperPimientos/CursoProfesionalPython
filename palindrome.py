@@ -45,3 +45,23 @@ def run():
 
 if __name__ == '__main__':
     run()
+
+
+
+# RETO:
+# Crea un programa que verifique si un numero es primo o no, pero hazlo con tipado estático.
+
+def es_primo(numero: int) -> bool:
+    for i in range(2, numero):
+        if numero % i == 0:
+            # print(f"{numero} mod {i} ==",str(numero%i))
+            return False
+    return True
+
+
+def run():
+    print(es_primo(13))
+
+if __name__ == '__main__':
+    run()
+
