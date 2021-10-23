@@ -90,3 +90,5 @@ coordinates: CoordinatesType = [
 #     return []
 #   else:
 #     None
+
+#Veremos un ejemplo en nuestro clasico ejercicio palindrome.py
