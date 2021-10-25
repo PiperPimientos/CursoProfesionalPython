@@ -65,3 +65,39 @@ print(f'Pokemon tipo volador - fuego: {my_set3}')
 
 my_set4 = pokemon_tipo_dragon ^ pokemon_tipo_electrico
 print(f'Pokemon tipo dragon ^ electrico: {my_set4}')
+
+
+
+
+
+
+
+# Eliminar repetidos de una lista es un ejercicio muy común. Vamos a hacerlo para practicar el uso de sets, o conjuntos.
+
+# Es decir, muchas veces voy a tener listas, diccionarios, tuplas, donde se van a repetir elementos y voy a querer eliminarlos. 
+
+# Es decir, muchas veces voy a tener listas, diccionarios, tuplas, donde se van a repetir elementos y voy a querer eliminarlos. Utilizaremos un ciclo for para esto.
+# 1.	Vamos a crear una funcion que elimine los duplicados de una lista:
+# funcion remove_duplicates y como parámetro una lista llamada some_list
+# def remove_duplicates(some_list).
+# 2.	Adentro crearemos un una lista llamada without_duplicates, que contendrá una lista vacia y sera la que contenga los elementos sin repetir.
+# 3.	Vamos a crear un ciclo for element in some_list:
+# ponemos una condicional si el elemento no esta en without_duplicates: entonces le agregaremos a esta lista without_duplicates con el método .append(element), el elemento
+# 4.	Por ultimo cuando termine este ciclo, retornamos without_duplicates
+
+def remove_duplicates(some_list):
+    without_duplicates = []
+    for element in some_list:
+        if element not in without_duplicates:
+            without_duplicates.append(element)
+    return without_duplicates
+
+
+def run():
+    random_list = [1, 1, 2, 2, 4]
+    print(remove_duplicates(random_list))
+
+if __name__ == '__main__':
+    run()
+
+# RETO: Crea un programa que elimine los elementos repetidos de una lista, pero en lugar de utilizar un ciclo for, utiliza sets.
